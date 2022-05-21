@@ -20,12 +20,20 @@
         "PortfolioBalance": 1234.21,
         "StockHoldings": [
             {
-                "symbol": "IBM",
-                "holding": 49.77
+                "Symbol": "IBM",
+                "Holding": 49.77
             },
             {
-                "symbol": "NVDIA",
-                "holding": 55.76
+                "Symbol": "NVDIA",
+                "Holding": 55.76
+            }
+        ],
+        "Watch": [
+            {
+                "Symbol": "AAPL"
+            },
+            {
+                "Symbol":"IBM"
             }
         ]
     },
@@ -35,12 +43,12 @@
             "PortfolioBalance": 9.21,
             "StockHoldings": [
                 {
-                    "symbol": "AAPL",
-                    "holding": 99.11
+                    "Symbol": "AAPL",
+                    "Holding": 99.11
                 },
                 {
-                    "symbol": "IBM",
-                    "holding": 5.76
+                    "Symbol": "IBM",
+                    "Holding": 5.76
                 }
             ]
         }

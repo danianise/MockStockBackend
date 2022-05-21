@@ -11,6 +11,11 @@ const portfolioSchema = new mongoose.Schema (
                 Symbol: {type: String},
                 Holding: {type: Number},
             }
+        ],
+        Watch: [
+            {
+                Symbol: {type: String}
+            }
         ]
     }
 
