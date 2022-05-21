@@ -9,6 +9,12 @@ router.get('/', (req,res) => {
         .then(data => res.json(data))
 })
 
+router.get('/:all', (req, res) => {
+    Portfolio.find({})
+        .then(data => res.json(data))
+})
+
+
 
 router.get('/watchlist', (req, res) => {
     Portfolio.find({ Watch: { $not: { $size: 0 }} })
