@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
 
 
 router.get('/watchlist', (req, res) => {
-    Portfolio.find({ Watch: "true" })
+    Portfolio.find({ Watch: { $not: { $size: 0 }} })
         .then(data => res.json(data))
 })
 
