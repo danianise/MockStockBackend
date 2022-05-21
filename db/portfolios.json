@@ -1,0 +1,49 @@
+[
+    {
+        "Username": "genericUser",
+        "CashBalance": 1234.56,
+        "PortfolioBalance": 76543.21,
+        "StockHoldings": [
+                {
+                "Symbol": "GOOG",
+                "Holding": 2049.77
+                },
+                {
+                "Symbol": "AAPL",
+                "Holding": 134.76
+                }
+            ]
+        },
+    {
+        "Username": "charlie",
+        "CashBalance": 420.69,
+        "PortfolioBalance": 1234.21,
+        "StockHoldings": [
+            {
+                "symbol": "IBM",
+                "holding": 49.77
+            },
+            {
+                "symbol": "NVDIA",
+                "holding": 55.76
+            }
+        ]
+    },
+    {
+            "Username": "alice",
+            "CashBalance": 1.69,
+            "PortfolioBalance": 9.21,
+            "StockHoldings": [
+                {
+                    "symbol": "AAPL",
+                    "holding": 99.11
+                },
+                {
+                    "symbol": "IBM",
+                    "holding": 5.76
+                }
+            ]
+        }
+]
+
+
