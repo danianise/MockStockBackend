@@ -14,6 +14,12 @@ router.get('/:all', (req, res) => {
         .then(data => res.json(data))
 })
 
+router.get('/search/:symbol', (req, res) => {
+    Portfolio.find({})
+        .then(data => res.json(data))
+})
+
+
 
 
 router.get('/watchlist', (req, res) => {
@@ -23,6 +29,18 @@ router.get('/watchlist', (req, res) => {
 
 
 router.put('/:id', async (req, res, next) => {
+    try {
+        const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
+        console.log(updatedPortfolio);
+        return res.redirect(`/portfolios`)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+router.put('search/:id', async (req, res, next) => {
     try {
         const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
         console.log(updatedPortfolio);
