@@ -2,30 +2,32 @@
     {
         "Username": "genericUser",
         "CashBalance": 1234.56,
-        "PortfolioBalance": 76543.21,
         "StockHoldings": [
                 {
                 "Symbol": "GOOG",
-                "Holding": 2049.77
+                "Shares": "0",
+                "Cost": "0"
                 },
                 {
                 "Symbol": "AAPL",
-                "Holding": 134.76
+                "Shares": "0",
+                "Cost": "0"
                 }
             ]
         },
     {
         "Username": "charlie",
         "CashBalance": 420.69,
-        "PortfolioBalance": 1234.21,
         "StockHoldings": [
             {
                 "Symbol": "IBM",
-                "Holding": 49.77
+                "Shares": "0",
+                "Cost": "0"
             },
             {
-                "Symbol": "NVDIA",
-                "Holding": 55.76
+                "Symbol": "NVIDIA",
+                "Shares": "0",
+                "Cost": "0"
             }
         ],
         "Watch": [
@@ -40,15 +42,16 @@
     {
             "Username": "alice",
             "CashBalance": 1.69,
-            "PortfolioBalance": 9.21,
             "StockHoldings": [
                 {
                     "Symbol": "AAPL",
-                    "Holding": 99.11
+                    "Shares": "0",
+                    "Cost": "0"
                 },
                 {
                     "Symbol": "IBM",
-                    "Holding": 5.76
+                    "Shares": "0",
+                    "Cost": "0"
                 }
             ]
         }
