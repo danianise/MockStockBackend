@@ -1,7 +1,7 @@
 [
     {
         "Username": "genericUser",
-        "CashBalance": 1234.56,
+        "CashBalance": 50234.56,
         "StockHoldings": [
                 {
                 "Symbol": "GOOG",

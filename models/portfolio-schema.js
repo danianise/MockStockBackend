@@ -7,7 +7,11 @@ const portfolioSchema = new mongoose.Schema (
         StockHoldings: [
             {
                 Symbol: {type: String},
-                Shares: { type: Number },
+                Shares: { 
+                    type: Number,
+                    get: v => Math.round(v),
+                    set: v => Math.round(v)  
+                },
                 Cost: { type: Number }
             }
         ],
