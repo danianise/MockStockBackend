@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
 })
 
 //Updating One Portfolio
-router.patch('/:id', getPortfolio, async (req, res) => {
+router.put('/:id', getPortfolio, async (req, res) => {
     if(req.body.Username != null){
         res.portfolio.Username = req.body.Username
     }
