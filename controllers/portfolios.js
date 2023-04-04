@@ -33,26 +33,26 @@ router.post('/', async (req, res) => {
 })
 
 //Updating One Portfolio
-// router.patch('/:id', getPortfolio, async (req, res) => {
-//     if(req.body.Username != null){
-//         res.portfolio.Username = req.body.Username
-//     }
-//     if(req.body.CashBalance != null){
-//         res.portfolio.CashBalance = req.body.CashBalance
-//     }
-//     if(req.body.StockHoldings != null){
-//         res.portfolio.StockHoldings = req.body.StockHoldings
-//     }
-//     if(req.body.Watch != null){
-//         res.portfolio.Watch = req.body.Watch
-//     }
-//     try {
-//         const updatedPortfolio = await res.portfolio.save()
-//         res.json(updatedPortfolio)
-//     } catch(err){
-//         res.status(400).json({message: err.message})
-//     }
-// })
+router.patch('/:id', getPortfolio, async (req, res) => {
+    if(req.body.Username != null){
+        res.portfolio.Username = req.body.Username
+    }
+    if(req.body.CashBalance != null){
+        res.portfolio.CashBalance = req.body.CashBalance
+    }
+    if(req.body.StockHoldings != null){
+        res.portfolio.StockHoldings = req.body.StockHoldings
+    }
+    if(req.body.Watch != null){
+        res.portfolio.Watch = req.body.Watch
+    }
+    try {
+        const updatedPortfolio = await res.portfolio.save()
+        res.json(updatedPortfolio)
+    } catch(err){
+        res.status(400).json({message: err.message})
+    }
+})
 
 // Deleting One Portfolio
 router.delete('/:id', getPortfolio, async (req, res) => {
@@ -103,29 +103,29 @@ async function getPortfolio(req, res, next){
 // })
 
 
-router.put('/:id', async (req, res, next) => {
-    try {
-        const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updatedPortfolio);
-        return res.redirect(`/portfolios`)
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
+// router.put('/:id', async (req, res, next) => {
+//     try {
+//         const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
+//         console.log(updatedPortfolio);
+//         return res.redirect(`/portfolios`)
+//     } catch (error) {
+//         console.log(error);
+//         req.error = error;
+//         return next();
+//     }
+// })
 
-router.put('search/:id', async (req, res, next) => {
-    try {
-        const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
-        console.log(updatedPortfolio);
-        return res.redirect(`/portfolios`)
-    } catch (error) {
-        console.log(error);
-        req.error = error;
-        return next();
-    }
-})
+// router.put('search/:id', async (req, res, next) => {
+//     try {
+//         const updatedPortfolio = await Portfolio.findByIdAndUpdate(req.params.id, req.body);
+//         console.log(updatedPortfolio);
+//         return res.redirect(`/portfolios`)
+//     } catch (error) {
+//         console.log(error);
+//         req.error = error;
+//         return next();
+//     }
+// })
 
 // router.delete('/:id/', (req, res) => {
 //     Portfolio.findByIdAndDelete({ _id: req.params.id })
